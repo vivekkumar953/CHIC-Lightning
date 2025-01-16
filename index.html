@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic Lighting & Design</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+
+    <!-- Add Bootstrap CSS link for responsive design -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+   <section id="header"> 
+    <!-- Header Section --> 
+    <div class="slider">            
+        <!-- Display Date, Time, and Location -->
+        <img  class="background-image object-fit-xxl-contain " src="images/slider-1.jpg">
+    <div class="overlay-text">
+                <marquee class="ticker" id="date-time-location" style="z-index: 1000; color: black;">
+                    <p id="current-date-time">Current Date and Time: <span id="datetime"></span>
+                    <span id="current-location">Current Location: </span><span id="location"></span></p>
+                </marquee>
+        <h1>Welcome to Chic Lightening</h1>
+            <p>We are committed to uploading educative content daily.</p>
+        </div>
+            <!--Navigation Menu -->
+            <nav class="navbar navbar-expand-lg navbar-light navbar-fixed" id="navbar" style="background-color: #e3f2fd;">
+                 <a class="navbar-brand" href="#" style="color: transparent;"><img src="logo.png" alt="" width="50" height="50"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="container-fluid">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item" data-color="rgb(183, 196, 207,0.9)"><a class="nav-link" href="#product-search-form">CEILING LIGHTS</a></li>
+                        <li class="nav-item" data-color="rgb(238, 227, 203,0.9)"><a class="nav-link" href="#ca">WALL LIGHTS</a></li>
+                        <li class="nav-item" data-color="rgb(215, 192, 174,0.9)"><a class="nav-link" href="#ad">LAMPS</a></li>
+                        <li class="nav-item" data-color="rgb(150, 126, 118,0.9)"><a class="nav-link" href="#bc">Gallery</a></li>
+                        <li class="nav-item" data-color="rgb(226, 199, 153,0.9)"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                        <li class="nav-item">
+                            <div id="Visitor-count">
+                                <p>Visitor <i class="fa fa-user-circle" aria-hidden="true"></i>:<span id="count">0</span></p>
+                            </div></li>
+                    </ul>
+                </div></div>
+            </nav>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Main Content Section--------------------------------->
+    <main class="container my-4" id="products">
+        <!-- CEILING LIGHTS Section -->
+        <form id="product-search-form">
+        <input type="text" id="product-search" placeholder="Search products...">
+        <button class="see" type="submit">Search <i class="fa fa-search"></i></button>
+    </form>
+        <section id="ceiling-lights" class="my-4" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="text-center">CEILING LIGHTS</h2>
+            <!-- Product listings-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product">
+                        <img src="images/cei-1.png" alt="Ceiling Light 1" class="img-fluid">
+                        <p class="product-name">Stylish Ceiling Light</p>
+                        <p style="font-weight: bolder;">Price: $99.99</p>
+                        <button class="btn" onclick="product()">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product">
+                        <img src="images/han-5.png" alt="Ceiling Light 2" class="img-fluid">
+                        <p class="product-name">Elegant Ceiling Light</p>
+                        <p style="font-weight: bold;">Price: $149.99</p>
+                        <button class="btn" onclick="product()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+                <center>
+                    <button class="see-ceiling see toggle" id="ca">See more <img class="opener" src="https://i.imgur.com/uLlPUfM.png"/></button>
+                </center>
+    <!-- Hidden product listings -->
+    <div class="hidden-products-A" style="display: none;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/han-6.png" alt="Ceiling Light 3" class="img-fluid">
+                    <p class="product-name">Luxury Ceiling Light</p>
+                    <p style="font-weight: bold;">Price: $199.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/han-8.png" alt="Ceiling Light 4" class="img-fluid">
+                    <p class="product-name">Modern Ceiling Light</p>
+                    <p style="font-weight: bold;">Price: $179.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/han-12.png" alt="Ceiling Light 3" class="img-fluid">
+                    <p class="product-name">Luxury Ceiling Light</p>
+                    <p style="font-weight: bold;">Price: $199.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </section>
+        
+        <!-- WALL LIGHTS Section -->
+        <section id="wall-lights" class="my-4" data-aos="fade-up" data-aos-duration="1000">
+
+            <h2 class="text-center">WALL LIGHTS</h2>
+            <!-- Product listings -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product">
+                        <img src="images/outdoor-1.png" alt="Wall Light 1" class="img-fluid">
+                        <p class="product-name">Modern Wall Light</p>
+                        <p style="font-weight: bold;">Price: $79.99</p>
+                        <button class="btn" onclick="product()">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product">
+                        <img src="images/outdoor-2.png" alt="Wall Light 2" class="img-fluid">
+                        <p class="product-name">Contemporary Wall Light</p>
+                        <p style="font-weight: bold;">Price: $119.99</p>
+                        <button class="btn" onclick="product()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <center>
+                    <button class="see-wall see toggle" id="ad">See more <img class="opener" src="https://i.imgur.com/uLlPUfM.png"/></button>
+                </center>
+    <!-- Hidden product listings -->
+    <div class="hidden-products-B" style="display: none;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/stag-1.png" alt="Ceiling Light 3" class="img-fluid">
+                    <p class="product-name">Luxury Stage Light</p>
+                    <p style="font-weight: bold;">Price: $149.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/stag-2.png" alt="Ceiling Light 4" class="img-fluid" style="height: 220px;">
+                    <p class="product-name">Modern wall Light</p>
+                    <p style="font-weight: bold;">Price: $59.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/cei-2.png" alt="Ceiling Light 3" class="img-fluid"  style="height: 220px;">
+                    <p class="product-name">Luxury wall Light</p>
+                    <p style="font-weight: bold;">Price: $99.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>
+        
+        <!-- LAMPS Section -->
+        <section id="lamps" class="my-4" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="text-center">LAMPS</h2>
+            <!-- Product listings -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product">
+                        <img src="images/lamp-1.png" alt="Lamp 1" class="img-fluid">
+                        <p class="product-name">Designer Table Lamp</p>
+                        <p style="font-weight: bold;">Price: $49.99</p>
+                        <button class="btn" onclick="product()">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product">
+                        <img src="images/lamp-2.png" alt="Lamp 2" class="img-fluid">
+                        <p class="product-name">Classic Floor Lamp</p>
+                        <p style="font-weight: bold;">Price: $79.99</p>
+                        <button class="btn" onclick="product()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <center>
+                    <button class="see see-lamp toggle" id="bc">See more <img class="opener" src="https://i.imgur.com/uLlPUfM.png"/></button>
+            </center>
+    <!-- Hidden product listings -->
+    <div class="hidden-products-C" style="display: none;" >
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/cad-1.png" alt="Ceiling Light 3" class="img-fluid">
+                    <p class="product-name">Floral Elegance Candle Holder</p>
+                    <p style="font-weight: bold;">Price: $199.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/cad-2.png" alt="Ceiling Light 4" class="img-fluid">
+                    <p class="product-name">Metal Tree Candle Holder</p>
+                    <p style="font-weight: bold;">Price: $179.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                    <img src="images/cad-3.png" alt="Ceiling Light 3" class="img-fluid">
+                    <p class="product-name">Floral Twist Candle Holder</p>
+                    <p style="font-weight: bold;">Price: $159.99</p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>
+        
+    </main>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="my-4" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-center">Gallery</h2>
+        <!-- Image gallery -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Tree bright.pdf" download target="_blank">
+                    <img src="images/slide-1.jpg" alt="Gallery Image 1" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Lampat String Lights.pdf" download target="_blank">
+                    <img src="images/slide-2.jpg" alt="Gallery Image 2" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Hanging Lights.pdf" download target="_blank">
+                    <img src="images/slide-3.jpg" alt="Gallery Image 1" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Ceiling Lighting.pdf" download target="_blank">
+                    <img src="images/slide-4.jpg" alt="Gallery Image 1" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Backyard Lightning.pdf" download target="_blank"> 
+                    <img src="images/slide-5.jpg" alt="Gallery Image 2" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Lite House Solar LED.pdf" download target="_blank">
+                    <img src="images/slide-6.jpg" alt="Gallery Image 1" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/LED Water Droplets.pdf" download target="_blank">
+                    <img src="images/slide-7.jpg" alt="Gallery Image 1" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Gelani Lights.pdf" download target="_blank">
+                    <img src="images/slide-8.jpg" alt="Gallery Image 2" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <a href="documents/Solar Wall Lights.pdf" download target="_blank">
+                    <img src="images/slide-9.jpg" alt="Gallery Image 1" class="img-fluid" style="width: 100%">
+                </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Feedback Section -->
+    <section id="feedback" class="my-4" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-center">Feedback</h2>
+        <!-- Feedback form-->
+        <form class="feedback">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="ab">Submit</button>
+        </form>
+    </section>
+    
+
+    <!-- Offer Section -->
+    <section class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-center">Special Offers</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="offer-item">
+                    <img src="images/bulb.png" alt="">
+                    <h2 class="text-light">LED Bulb</h2>
+                    <p class="text-light">Save 20% on energy-efficient LED bulbs. Limited stock available!</p>
+                    <p style="font-weight: bold;">
+                        <span class="original-price">$50.00</span>
+                        <span class="discounted-price text-light">$40.00</span>
+                        <span class="discount-percentage text-danger">-20%</span>
+                    </p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="offer-item">
+                    <img src="images/ring.png" alt="">
+                    <h2 class="text-light">Ring Light</h2>
+                    <p class="text-light">Get a free installation service with every chandelier purchase. Limited time offer!</p>
+                    <p style="font-weight: bold;">
+                        <span class="original-price">$90.00</span>
+                        <span class="discounted-price text-light" style="color: white">$74.00</span>
+                        <span class="discount-percentage text-danger" style="color: red">-17.8%</span>
+                    </p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="offer-item">
+                    <img src="images/disco.png" alt="">
+                    <h2 class="text-light">Disco Light</h2>
+                    <p class="text-light">Buy one, get one free on outdoor lights. Perfect for your garden or patio!</p>
+                    <p style="font-weight: bold;">
+                        <span class="original-price">$180.00</span>
+                        <span class="discounted-price text-light">$135.00</span>
+                        <span class="discount-percentage text-danger">-25%</span>
+                    </p>
+                    <button class="btn" onclick="product()">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- FAQ Section -->
+<section id="faq" class="my-4" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+    <ul class="faq-list">
+        <li>
+            <strong class="question">Q: How do I place an order?</strong>
+            <p class="answer">A: You can place an order on our website or contact our customer service.</p>
+        </li>
+        <li>
+            <strong class="question">Q: What is your return policy?</strong>
+            <p class="answer">A: We offer a 30-day return policy for unused items.</p>
+        </li>
+        <li>
+            <strong class="question">Q: How can I ensure the security of my personal information when using your website?</strong>
+            <p class="answer">A: We take data security seriously and employ industry-standard encryption protocols to protect your personal information. Additionally, we regularly update our security measures to stay ahead of potential threats.</p>
+        </li>
+        <li>
+            <strong class="question">Q: Do you offer a return or refund policy for products purchased through your website?</strong>
+            <p class="answer">A: Yes, we have a clear return and refund policy outlined on our website. If you're not satisfied with your purchase, you can follow the specified process within the provided timeframe to request a return or refund..</p>
+        </li>
+        <li>
+            <strong class="question">Q: What payment methods are accepted on your website?</strong>
+            <p class="answer">A: We accept a variety of payment methods, including credit and debit cards, PayPal, and other popular online payment options. You can find a full list of accepted payment methods during the checkout process on our website..</p>
+        </li>
+    </ul>
+</section>
+
+    
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="my-4" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-center">Contact Us</h2>
+        <!-- Contact information -->
+        <form class="contact">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="name"  class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+    <!-- Footer ---------------------------------------------------------------------->
+<footer class="bg-dark text-light py-4">
+    <center>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <h4>Contact Us</h4>
+                <p>
+                    Address: 123 Main Street, City, Country<br>
+                    Email: info@yourwebsite.com<br>
+                    Phone: +1 (123) 456-7890
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h4>Quick Links</h4>
+                <ul style="list-style-type: none" class="p-2">
+                    <li ><a href="#header">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="#faq">Help</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12" id="social">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="https://www.twitter.com/"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+    </center>
+</footer>
+
+</body>
+</html>
